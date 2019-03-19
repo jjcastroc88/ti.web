@@ -1,0 +1,21 @@
+@import '../../globals';
+
+.nav-container {
+    text-align: center;
+    width: 100%;
+
+    &__button {
+        &--active {
+            background-color: red;
+        }
+
+        &:hover {
+            background-color: $md-primary-color;
+            color: $md-secondary-color;
+        }
+
+        &-link {
+            text-decoration: none;
+        }
+    }
+}

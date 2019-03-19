@@ -1,0 +1,13 @@
+.list-categories {
+    width: 100%;
+
+    &__subheader {
+        width: 100%;
+        border-style: none;
+    }
+
+    &-item {
+        margin-top: 20px;
+        width: 100%;
+    }
+}

@@ -1,27 +1,19 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import { Provider } from 'react-redux';
-import { NavigationDrawer } from 'react-md';
-import logo from './logo.svg';
-import './App.css';
+import { Router } from 'react-router-dom';
+import Routes from './routes/index';
+import configureStore from './store/configureStore';
+import './App.scss';
 
 class App extends Component {
   render() {
     return (
-      <NavigationDrawer
-        drawerTitle="react-md with CRA"
-        toolbarTitle="Welcome to react-md"
-      >
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome as to React 123</h1>
-          </header>
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
-        </div>
-      </NavigationDrawer>
+      <Provider store={configureStore.store}>
+        <Router history={configureStore.history}>
+          <Routes/>
+        </Router>
+      </Provider>
     );
   }
 }
